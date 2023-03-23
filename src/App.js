@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
-
+import AiChatComponent from './AiChatbot/AiChatComponent';
+import { useState } from 'react';
+import { BsFillChatTextFill } from "react-icons/bs";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 function App() {
+  const [botActive, setBotActive] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      < div style={{ height: "100vh" }}>
+        {botActive ?
+          <div className='chat-sec'>
+            <AiChatComponent />
+            <AiOutlineCloseCircle className='close-btn'
+              onClick={() => setBotActive(false)}
+            />
+          </div>
+          :
+          <BsFillChatTextFill
+            className='chat_icon'
+            onClick={() => setBotActive(true)} />}
+      </div>
+    </>
   );
 }
 

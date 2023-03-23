@@ -7,7 +7,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.chat_icon {
+  font-size: 50px;
+  color: green;
+  cursor: pointer;
+  bottom: 40px;
+  position: fixed;
+  right: 25px;
+}
+
+.cs-message-input {
+  border: 0px !important;
+}
+
+.chat-sec {
+  position: relative;
+}
+
+.chat-sec .close-btn {
+  position: absolute;
+  font-size: 25px;
+  z-index: 5;
+  color: red;
+  cursor: pointer;
+  top: 11px;
+  right: 10px;
 }
